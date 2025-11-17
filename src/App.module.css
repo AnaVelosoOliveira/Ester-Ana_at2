@@ -1,0 +1,39 @@
+.menu {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    gap: 20px;
+    height: 100px;
+    background-color: rgb(21, 90, 36);
+
+}
+
+.s1 {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.cop30 {
+    width: 60%;
+    height: auto;
+}
+
+
+.cop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tittle{
+    width: 100%;
+    text-align: center;
+}
