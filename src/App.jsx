@@ -3,6 +3,7 @@ import styles from './App.module.css'
 import cop30 from '/cop30.jpg'
 import { useState, useEffect } from 'react'
 import { Card } from './components/card'
+
 // import fogo from '/fogo.gif'
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
 
 
 const irPara = () => {
-  window.open('https://www.instagram.com', '_blank');
+  window.open('https://www.youtube.com/shorts/6mlbsCAOaEQ', '_blank');
 }
 
 
@@ -33,6 +34,7 @@ const irPara = () => {
         <a href="#s5">Motivo</a>
         <a href="#s6">Melhorias</a>
         <a href="#s7">Países</a>
+        <a href="#s8">Fogo</a>
 
 
       </nav>
@@ -45,55 +47,13 @@ const irPara = () => {
           </div>
         </section>
 
-
-        <section className={styles.s2} id='s2'>
-          <h2 className={styles.tecTitle}>COP30</h2>
-          <div className={styles.wrapCards}>
-            {dados && dados.map((item) => {
-              return (
-                <div key={item.id}>
-                  <Card cop={item.cop} imagem={item.imagem} text={item.texto} />
-                </div>
-              )
-            })}
-          </div>
-
-        </section>
-
-        <section className={styles.s3} id='s3'>
-          <h2 className={styles.tecTitle}>COP30</h2>
-          <div className={styles.wrapCards}>
-            {dados && dados.map((item) => {
-              return (
-                <div key={item.id}>
-                  <Card cop={item.cop} imagem={item.imagem} text={item.texto} />
-                </div>
-              )
-            })}
-          </div>
-
-        </section>
-        <section className={styles.s4} id='s4'>
-          <h2 className={styles.tecTitle}>COP30</h2>
-          <div className={styles.wrapCards}>
-            {dados && dados.map((item) => {
-              return (
-                <div key={item.id}>
-                  <Card cop={item.cop} imagem={item.imagem} text={item.texto} />
-                </div>
-              )
-            })}
-          </div>
-
-        </section>
-
         <section className={styles.s5} id='s5'>
           <h2 className={styles.tecTitle}>COP30</h2>
           <div className={styles.wrapCards}>
             {dados && dados.map((item) => {
               return (
                 <div key={item.id}>
-                  <Card cop={item.cop} imagem={item.imagem} text={item.texto} />
+                  <Card cop={item.cop}  text={item.texto} />
                 </div>
               )
             })}
@@ -101,41 +61,20 @@ const irPara = () => {
 
         </section>
         <section className={styles.s6} id='s6'>
-          <h2 className={styles.tecTitle}>COP30</h2>
-          <div className={styles.wrapCards}>
-            {dados && dados.map((item) => {
-              return (
-                <div key={item.id}>
-                  <Card cop={item.cop} imagem={item.imagem} text={item.texto} />
-                </div>
-              )
-            })}
-          </div>
+         
 
         </section>
 
         <section className={styles.s7} id='s7'>
-          <h2 className={styles.tecTitle}>COP30</h2>
-          <div className={styles.wrapCards}>
-            {dados && dados.map((item) => {
-              return (
-                <div key={item.id}>
-                  <Card cop={item.cop} imagem={item.imagem} text={item.texto} />
-                </div>
-              )
-            })}
-          </div>
+        
+          
 
         </section>
 
-
-
-
-
-
-        <section>
+        <section className={styles.s8} id='s8'>
           {/* <img src={fogo} alt="Fogo" /> */}
           <p onClick={irPara} className={styles.fire}>🔥</p>
+          <p className={styles.escritaclique} onClick={irPara}>Clique aqui</p>
         </section>
       </main>
 
