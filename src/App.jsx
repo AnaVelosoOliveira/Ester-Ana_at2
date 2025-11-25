@@ -3,24 +3,23 @@ import styles from './App.module.css'
 import cop30 from '/cop30.jpg'
 import { useState, useEffect } from 'react'
 import { Card } from './components/card'
-
-// import fogo from '/fogo.gif'
+import qr from '/qr.png'
 
 function App() {
 
   const [dados, setDados] = useState()
 
-    useEffect(() => {
-      fetch('/dados.json').then(response => response.json())
+  useEffect(() => {
+    fetch('/dados.json').then(response => response.json())
       .then(data => {
         setDados(data)
       })
   }, [])
 
 
-const irPara = () => {
-  window.open('https://www.youtube.com/shorts/6mlbsCAOaEQ', '_blank');
-}
+  const irPara = () => {
+    window.open('https://www.youtube.com/shorts/6mlbsCAOaEQ', '_blank');
+  }
 
 
   return (
@@ -53,29 +52,28 @@ const irPara = () => {
             {dados && dados.map((item) => {
               return (
                 <div key={item.id}>
-                  <Card cop={item.cop}  text={item.texto} />
+                  <Card cop={item.cop} text={item.texto} imagem={item.imagem} />
                 </div>
               )
             })}
           </div>
 
         </section>
-        <section className={styles.s6} id='s6'>
-         
 
-        </section>
-
-        <section className={styles.s7} id='s7'>
-        
-          
-
-        </section>
 
         <section className={styles.s8} id='s8'>
           {/* <img src={fogo} alt="Fogo" /> */}
           <p onClick={irPara} className={styles.fire}>🔥</p>
           <p className={styles.escritaclique} onClick={irPara}>Clique aqui</p>
         </section>
+
+        <section className={styles.s6} id='s6'>
+              <h6>Escaneia</h6>
+              <img className={styles.ursinho} src={qr} alt="QRCODE" />
+        </section>
+
+
+
       </main>
 
 
